@@ -14,7 +14,7 @@ public class HargaBahan extends BeratKemasan {
     // HARGA DIBAGI BERAT KEMASAN
 
     public double hargaTepung(){
-        return this.hargaTepung()/ this.beratTepung;
+        return this.hargaTepung()/ this.beratTepungTerigu;
     }
 
     public double hargaGulaPasir(){
@@ -55,11 +55,11 @@ public class HargaBahan extends BeratKemasan {
     }
 
     public double hargaKrimVanilla(){
-        return KrimVanilla() / beratKrim;
+        return KrimVanilla() / beratKrimVanilla;
     }
 
     public double hargaSelai(){
-        return SelaiRedBean() / beratSelai;
+        return SelaiRedBean() / beratSelaiRedBean;
     }
 
     public double hargaSosis(){
@@ -67,7 +67,7 @@ public class HargaBahan extends BeratKemasan {
     }
 
     public double hargaBeef(){
-        return SmokedBeef() / beratBeef;
+        return SmokedBeef() / beratSmokedBeef;
     }
 
     public double hargaBawang(){

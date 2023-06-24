@@ -3,11 +3,75 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modal;
-
+import dough.BahanRotiManis;
 /**
  *
  * @author hp
  */
-public class ModalRotiManis {
-    
+public class ModalRotiManis extends BahanRotiManis implements ModalAwal {
+    private int pesanan;
+
+    @Override
+    public double hitungModal() {
+        double modal = this.getTepungTerigu()* this.hargaTepung() + this.getGulaPasir()* this.hargaGulaPasir() + this.getButter()* this.hargaButter() + this.getEsBatu()* this.hargaEsBatu() + this.getRagi()* this.hargaRagi() + (this.getSusuBubuk()* this.hargaSusuBubuk()) + (this.getSusuCair()* this.hargaSusuCair()) + (this.getTelur()* this.hargaTelur());
+        return modal;
+    }
+
+    @Override
+    public int beratDough() {
+        return 50;
+    }
+
+    @Override
+    public double rotiPerAdonan() {
+        return this.calculateKomposisi()/ this.beratDough();
+    }
+
+    @Override
+    public double hitungTerigu() {
+        double hitung = this.getTepungTerigu()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungGula() {
+        double hitung = this.hargaGulaPasir()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungButter() {
+        double hitung = this.getButter()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungRagi() {
+        double hitung = this.getRagi()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungSusuBubuk() {
+        double hitung = this.getSusuBubuk()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungSusuCair() {
+        double hitung = this.getSusuCair()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungTelur() {
+        double hitung = this.getTelur()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
+
+    @Override
+    public double hitungEs() {
+        double hitung = this.getEsBatu()/ this.rotiPerAdonan() * pesanan;
+        return hitung;
+    }
 }
