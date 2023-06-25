@@ -43,7 +43,7 @@ public class HargaBahan extends BeratKemasan {
     }
     
     public double hargaEsBatu(){
-        return this.hargaEsbatu()/ this.beratEsBatu;
+        return this.hargaEsBatu()/ this.beratEsBatu;
     }
 
 
@@ -73,10 +73,6 @@ public class HargaBahan extends BeratKemasan {
 
     public double hargaBawang(){
         return getBawangBombay() / beratBawang;
-    }
-
-    private int hargaEsbatu() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

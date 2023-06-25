@@ -9,7 +9,7 @@ import dough.BahanPizza;
  *
  * @author hp
  */
-public class ModalPizza implements ModalAwal {
+public class ModalPizza extends BahanPizza implements ModalAwal {
     private BahanPizza bahanPizza;
     private int pesanan;
 
@@ -19,7 +19,7 @@ public class ModalPizza implements ModalAwal {
 
     @Override
     public double hitungModal() {
-        double modal = this.hitungTerigu() * hargaterigu + hitungGula() * hargaGulaPasir()
+        double modal = this.hitungTerigu() * this.hargaTepung() + hitungGula() * hargaGulaPasir()
                 + hitungButter() * hargaButter() + hitungEs() * hargaEsBatu()
                 + hitungRagi() * hargaRagi() + hitungSusuBubuk() * hargaSusuBubuk()
                 + hitungSusuCair() * hargaSusuCair() + hitungTelur() * hargaTelur();
