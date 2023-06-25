@@ -24,37 +24,37 @@ public class Harga implements ToppingFilling{
     // HARGA TOPPING dan FILLING
 
     @Override
-    public int keju() {
+    public int getKeju() {
         return 31000;
     }
 
     @Override
-    public int coklat() {
+    public int getCoklat() {
         return 29000;
     }
 
     @Override
-    public int KrimVanilla() {
-        return 30000;
+    public int getKrimVanilla() {
+      return 30000;
     }
 
     @Override
-    public int SelaiRedBean() {
+    public int getSelaiRedBean() {
         return 25000;
     }
 
     @Override
-    public int sosis() {
+    public int getSosis() {
         return 80000;
     }
 
     @Override
-    public int SmokedBeef() {
+    public int getSmokedBeef() {
         return 90000;
     }
 
     @Override
-    public int BawangBombay() {
+    public int getBawangBombay() {
         return 40000;
     }
 }

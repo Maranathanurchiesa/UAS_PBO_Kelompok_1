@@ -5,6 +5,7 @@
 package harga;
 import dough.ToppingFilling;
 
+
 /**
  *
  * @author hp
@@ -42,36 +43,40 @@ public class HargaBahan extends BeratKemasan {
     }
     
     public double hargaEsBatu(){
-        return this.hargaEsBatu()/ this.beratEsBatu;
+        return this.hargaEsbatu()/ this.beratEsBatu;
     }
 
 
     public double hargaKeju(){
-        return keju() / beratKeju;
+        return getKeju() / beratKeju;
     }
 
     public double hargaCoklat(){
-        return coklat() / beratCoklat;
+        return getCoklat() / beratCoklat;
     }
 
     public double hargaKrimVanilla(){
-        return KrimVanilla() / beratKrimVanilla;
+        return getKrimVanilla() / beratKrimVanilla;
     }
 
     public double hargaSelai(){
-        return SelaiRedBean() / beratSelaiRedBean;
+        return getSelaiRedBean() / beratSelaiRedBean;
     }
 
     public double hargaSosis(){
-        return sosis() / beratSosis;
+        return getSosis() / beratSosis;
     }
 
     public double hargaBeef(){
-        return SmokedBeef() / beratSmokedBeef;
+        return getSmokedBeef() / beratSmokedBeef;
     }
 
     public double hargaBawang(){
-        return BawangBombay() / beratBawang;
+        return getBawangBombay() / beratBawang;
+    }
+
+    private int hargaEsbatu() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

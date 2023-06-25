@@ -9,13 +9,13 @@ package dough;
  * @author hp
  */
 public interface ToppingFilling {
-    int getKeju();
-    int getCoklat();
-    int getKrimVanilla();
-    int getSelaiRedBean();
-    int getSosis();
-    int getSmokedBeef();
-    int getBawangBombay();
+    public int getKeju();
+    public int getCoklat();
+    public int getKrimVanilla();
+    public int getSelaiRedBean();
+    public int getSosis();
+    public int getSmokedBeef();
+    public int getBawangBombay();
 }
 
 

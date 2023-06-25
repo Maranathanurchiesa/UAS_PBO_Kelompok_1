@@ -10,15 +10,19 @@ import dough.BahanPizza;
  * @author hp
  */
 public class ModalPizza implements ModalAwal {
- 
+    private BahanPizza bahanPizza;
     private int pesanan;
+
+    public ModalPizza() {
+        bahanPizza = new BahanPizza();
+    }
 
     @Override
     public double hitungModal() {
-        double modal = this.tepungTerigu() * this.hargaTepung() + this.gulaPasir() * this.hargaGulaPasir()
-                + this.butter() * this.hargaButter() + this.esBatu() * this.hargaEsBatu()
-                + this.ragi() * this.hargaRagi() + (this.susuBubuk() * this.hargaSusuBubuk())
-                + (this.susuCair() * this.hargaSusuCair()) + (this.telur() * this.hargaTelur());
+        double modal = this.hitungTerigu() * hargaterigu + hitungGula() * hargaGulaPasir()
+                + hitungButter() * hargaButter() + hitungEs() * hargaEsBatu()
+                + hitungRagi() * hargaRagi() + hitungSusuBubuk() * hargaSusuBubuk()
+                + hitungSusuCair() * hargaSusuCair() + hitungTelur() * hargaTelur();
         return modal;
     }
 
@@ -29,54 +33,54 @@ public class ModalPizza implements ModalAwal {
 
     @Override
     public double rotiPerAdonan() {
-        return this.hitungKomposisi() / this.beratDough();
+        return bahanPizza.calculateKomposisi() / beratDough();
     }
 
     @Override
     public double hitungTerigu() {
-        double hitung = this.tepungTerigu() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getTepungTerigu() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungGula() {
-        double hitung = this.gulaPasir() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getGulaPasir() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungButter() {
-        double hitung = this.butter() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getButter() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungRagi() {
-        double hitung = this.ragi() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getRagi() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungSusuBubuk() {
-        double hitung = this.susuBubuk() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getSusuBubuk() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungSusuCair() {
-        double hitung = this.susuCair() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getSusuCair() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungTelur() {
-        double hitung = this.telur() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getTelur() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
     @Override
     public double hitungEs() {
-        double hitung = this.esBatu() / this.rotiPerAdonan() * pesanan;
+        double hitung = bahanPizza.getEsBatu() / rotiPerAdonan() * pesanan;
         return hitung;
     }
 
