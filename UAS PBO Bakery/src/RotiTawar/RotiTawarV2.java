@@ -15,8 +15,7 @@ public class RotiTawarV2 extends ModalRotiTawar implements Interface{
 
     @Override
     public double calculateTopping(){
-        double harga = 0;
-        return harga;
+        return 0;
     }
     public double calculateKeju(){
         double keju = 80 * pesanan;
