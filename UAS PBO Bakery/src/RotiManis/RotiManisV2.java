@@ -12,6 +12,8 @@ import harga.Interface;
  */
 public class RotiManisV2 extends ModalRotiManis implements Interface{
 
+    String nama = "Roti Manis Varian 2";
+    
     @Override
     public double calculateTopping() {
         double selai = this.getSelai() * 10;
@@ -19,26 +21,40 @@ public class RotiManisV2 extends ModalRotiManis implements Interface{
         return harga;
     }
     
-    
-
-    @Override
-    public double calculateFilling() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double hitungRedBean(){
+        double redbean = 10 * pesanan;
+        return redbean;
+    }
+    public double hitungKrimVanilla(){
+        double krimvanilla = 10 * pesanan;
+        return krimvanilla;
     }
 
     @Override
-    public double calculateModal() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double calculateFilling(){
+        double krim = this.hargaKrimVanilla() * 5;
+        double harga = krim;
+        return harga;
     }
 
     @Override
-    public double calculateHargaVarian() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double calculateModal(){
+        double hargaTopingFilling = this.calculateFilling() + this.calculateTopping();
+        double hargaBahan = this.hitungModal() / this.rotiPerAdonan();
+        double totalmodal = hargaBahan + hargaTopingFilling;
+        return totalmodal;
+    }
+
+    @Override
+    public double calculateHargaVarian(){
+        double untung = this.calculateModal() * 50/100;
+        double harga = this.calculateModal() * untung;
+        return Math.round(harga);
     }
 
     @Override
     public void calculateHarga() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Harga " + nama + " = Rp " + (int)calculateHargaVarian() + " /pcs ");
     }
     
 }

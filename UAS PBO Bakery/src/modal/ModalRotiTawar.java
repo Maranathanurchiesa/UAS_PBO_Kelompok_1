@@ -10,7 +10,7 @@ import dough.BahanRotiTawar;
  * @author hp
  */
 public class ModalRotiTawar extends BahanRotiTawar implements ModalAwal {
-    private int pesanan;
+    public int pesanan;
 
     @Override
     public int beratDough() {
