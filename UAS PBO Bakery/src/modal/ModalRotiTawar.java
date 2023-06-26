@@ -19,7 +19,7 @@ public class ModalRotiTawar extends BahanRotiTawar implements ModalAwal {
 
     @Override
     public double rotiPerAdonan() {
-        return this.calculateKomposisi()/ this.beratDough();
+        return this.calculateBahan()/ this.beratDough();
     }
 
     @Override

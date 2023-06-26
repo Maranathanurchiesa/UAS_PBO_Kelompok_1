@@ -17,5 +17,5 @@ public interface bahan {
     int getSusuCair();
     int getTelur();
     int getEsBatu();
-    int calculateKomposisi();
+    public int calculateBahan();
 }

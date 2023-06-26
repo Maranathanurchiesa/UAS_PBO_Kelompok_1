@@ -48,31 +48,31 @@ public class HargaBahan extends BeratKemasan {
 
 
     public double hargaKeju(){
-        return getKeju() / beratKeju;
+        return this.getKeju() / this.beratKeju;
     }
 
     public double hargaCoklat(){
-        return getCoklat() / beratCoklat;
+        return this.getCoklat() / this.beratCoklat;
     }
 
     public double hargaKrimVanilla(){
-        return getKrimVanilla() / beratKrimVanilla;
+        return this.getKrimVanilla() / this.beratKrimVanilla;
     }
 
     public double hargaSelai(){
-        return getSelaiRedBean() / beratSelaiRedBean;
+        return this.getSelai() / this.beratSelaiRedBean;
     }
 
     public double hargaSosis(){
-        return getSosis() / beratSosis;
+        return getSosis() / this.beratSosis;
     }
 
     public double hargaBeef(){
-        return getSmokedBeef() / beratSmokedBeef;
+        return this.getSmokedBeef() / beratSmokedBeef;
     }
 
     public double hargaBawang(){
-        return getBawangBombay() / beratBawang;
+        return this.getBawangBombay() / beratBawang;
     }
 
 }

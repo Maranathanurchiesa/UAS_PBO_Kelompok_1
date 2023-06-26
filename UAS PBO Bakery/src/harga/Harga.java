@@ -39,7 +39,7 @@ public class Harga implements ToppingFilling{
     }
 
     @Override
-    public int getSelaiRedBean() {
+    public int getSelai() {
         return 25000;
     }
 

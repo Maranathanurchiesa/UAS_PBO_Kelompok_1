@@ -51,8 +51,8 @@ public class BahanPizza extends HargaBahan implements bahan {
     }
 
     @Override
-    public int calculateKomposisi() {
-        int total = getTepungTerigu() + getGulaPasir() + getButter() + getEsBatu() + getRagi() + getSusuBubuk() + getSusuCair() + getTelur();
+    public int calculateBahan() {
+        int total = this.getTepungTerigu() + this.getGulaPasir() + this.getButter() + this.getEsBatu() + this.getRagi() + this.getSusuBubuk() + this.getSusuCair() + this.getTelur();
         return total;
     }
 }

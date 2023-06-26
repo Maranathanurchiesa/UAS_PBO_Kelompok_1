@@ -9,7 +9,7 @@ import dough.BahanRotiManis;
  * @author hp
  */
 public class ModalRotiManis extends BahanRotiManis implements ModalAwal {
-    private int pesanan;
+    public int pesanan;
 
     @Override
     public double hitungModal() {
@@ -24,7 +24,7 @@ public class ModalRotiManis extends BahanRotiManis implements ModalAwal {
 
     @Override
     public double rotiPerAdonan() {
-        return this.calculateKomposisi()/ this.beratDough();
+        return this.calculateBahan()/ this.beratDough();
     }
 
     @Override

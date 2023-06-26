@@ -12,7 +12,7 @@ public interface ToppingFilling {
     public int getKeju();
     public int getCoklat();
     public int getKrimVanilla();
-    public int getSelaiRedBean();
+    public int getSelai();
     public int getSosis();
     public int getSmokedBeef();
     public int getBawangBombay();

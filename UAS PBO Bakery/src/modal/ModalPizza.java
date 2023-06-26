@@ -11,7 +11,7 @@ import dough.BahanPizza;
  */
 public class ModalPizza extends BahanPizza implements ModalAwal {
     private BahanPizza bahanPizza;
-    private int pesanan;
+    public int pesanan;
 
     public ModalPizza() {
         bahanPizza = new BahanPizza();
@@ -19,10 +19,10 @@ public class ModalPizza extends BahanPizza implements ModalAwal {
 
     @Override
     public double hitungModal() {
-        double modal = this.hitungTerigu() * this.hargaTepung() + hitungGula() * hargaGulaPasir()
-                + hitungButter() * hargaButter() + hitungEs() * hargaEsBatu()
-                + hitungRagi() * hargaRagi() + hitungSusuBubuk() * hargaSusuBubuk()
-                + hitungSusuCair() * hargaSusuCair() + hitungTelur() * hargaTelur();
+        double modal = this.hitungTerigu() * this.hargaTepung() + this.hitungGula() * this.hargaGulaPasir()
+                + this.hitungButter() * this.hargaButter() + this.hitungEs() * this.hargaEsBatu()
+                + this.hitungRagi() * this.hargaRagi() + this.hitungSusuBubuk() * this.hargaSusuBubuk()
+                + this.hitungSusuCair() * this.hargaSusuCair() + this.hitungTelur() * this.hargaTelur();
         return modal;
     }
 
@@ -33,7 +33,7 @@ public class ModalPizza extends BahanPizza implements ModalAwal {
 
     @Override
     public double rotiPerAdonan() {
-        return bahanPizza.calculateKomposisi() / beratDough();
+        return bahanPizza.calculateBahan() / beratDough();
     }
 
     @Override
