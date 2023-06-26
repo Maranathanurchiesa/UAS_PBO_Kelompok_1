@@ -14,11 +14,11 @@ public class RotiTawarV2 extends ModalRotiTawar implements Interface{
     String nama = "Roti Tawar Varian 2";
 
     @Override
-    public double calculateTopping() {
+    public double calculateTopping(){
         double harga = 0;
         return harga;
     }
-    public double hitungKeju(){
+    public double calculateKeju(){
         double keju = 80 * pesanan;
         return keju;
     }

@@ -20,11 +20,11 @@ public class RotiManisV3 extends ModalRotiManis implements Interface{
         return 0.0;
     }
     
-    public double hitungKeju(){
+    public double calculateKeju(){
         double keju = 10 * pesanan;
         return keju;
     }
-    public double hitungSosis(){
+    public double calculateSosis(){
         double sosis = 10 * pesanan;
         return sosis;
     }

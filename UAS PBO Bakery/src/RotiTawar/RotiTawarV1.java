@@ -20,7 +20,7 @@ public class RotiTawarV1 extends ModalRotiTawar implements Interface{
         return harga;
     }
     
-    public double hitungCoklat(){
+    public double calculateCoklat(){
         double coklat = 80 * pesanan;
         return coklat;
     }

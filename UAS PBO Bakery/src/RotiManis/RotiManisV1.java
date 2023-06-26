@@ -21,11 +21,11 @@ public class RotiManisV1  extends ModalRotiManis implements Interface{
         return harga;
     }
     
-    public double hitungCoklat(){
+    public double calculateCoklat(){
         double coklat = 10 * pesanan;
         return coklat;
     }
-    public double hitungKeju(){
+    public double calculateKeju(){
         double keju = 5 * pesanan;
         return keju;
     }
